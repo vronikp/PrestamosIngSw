@@ -1,10 +1,10 @@
-from django.test import TestCase, Client
+import unittest
 
 # Create your tests here.
 from prestamo import Prestamo
 
 #Creando casos de prueba
-class CrearPrestamo (TestCase):
+class CrearPrestamo (unittest.TestCase):
     def crear_prestamo(self):
         self.prestamo = Prestamo()
 
