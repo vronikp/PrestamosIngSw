@@ -1,0 +1,14 @@
+language: python
+python:
+  - 3.4
+
+before_install:
+  - pip install -r requirements.txt
+
+
+script:
+  - coverage run --source=prestamos manage.py test prestamos
+  - py.test
+
+after_script:
+  coveralls
