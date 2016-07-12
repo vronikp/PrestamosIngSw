@@ -7,7 +7,7 @@ before_install:
 
 
 script:
-  - coverage run --source=prestamos manage.py test prestamos
+  - coverage run --source=Prestamos manage.py test Prestamos
   - py.test
 
 after_script:

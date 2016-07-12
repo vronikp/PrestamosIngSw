@@ -1,7 +1,7 @@
 from django.test import TestCase, Client
 
 # Create your tests here.
-from Prestamo import Prestamo
+from prestamo import Prestamo
 
 #Creando casos de prueba
 class CrearPrestamo (TestCase):
@@ -34,6 +34,10 @@ class CrearPrestamo (TestCase):
 
     def test_calcular_prestamo_4(self):
         response = Prestamo.valor_total(self, 25000,5)
+        self.assertEqual(response,0)
+
+    def test_calcular_prestamo_4(self):
+        response = Prestamo.valor_total(self, -1,5)
         self.assertEqual(response,0)
 
     # def test_lista_consultas(self):
